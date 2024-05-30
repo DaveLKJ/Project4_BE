@@ -5,6 +5,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { Pool } = require("pg");
 
+const userRoutes = require("./routes/userRoutes");
+
 require("dotenv").config();
 require("./config/databasepg");
 
@@ -14,8 +16,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5001;
 
-app.listen(port, function () {
-  console.log(`Express app running on port ${port}`);
+app.listen(PORT, function () {
+  console.log(`Express app running on port ${PORT}`);
 });
