@@ -2,7 +2,6 @@ import coffeeModel from "../models/coffeeModel.js";
 import fs from "fs";
 
 // add coffee
-
 const addCoffee = async (req, res) => {
   let image_filename = `${req.file.filename}`;
 
@@ -22,4 +21,15 @@ const addCoffee = async (req, res) => {
   }
 };
 
-export { addCoffee };
+// all coffee list
+const listCoffee = async (req, res) => {
+  try {
+    const coffees = await coffeeModel.find({});
+    res.json({ success: true, data: coffees });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+export { addCoffee, listCoffee };
