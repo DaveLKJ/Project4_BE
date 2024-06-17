@@ -1,5 +1,5 @@
 import express from "express";
-import { addCoffee, listCoffee } from "../controllers/coffeeController.js";
+import { addCoffee, listCoffee, removeCoffee } from "../controllers/coffeeController.js";
 import multer from "multer";
 
 const coffeeRouter = express.Router();
@@ -16,5 +16,6 @@ const upload = multer({ storage: storage });
 
 coffeeRouter.post("/add", upload.single("image"), addCoffee);
 coffeeRouter.get("/list", listCoffee)
+coffeeRouter.post("/remove", removeCoffee)
 
 export default coffeeRouter;
