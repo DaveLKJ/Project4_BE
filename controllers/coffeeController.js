@@ -1,8 +1,10 @@
-import coffeeModel from "../models/coffeeModel";
+import coffeeModel from "../models/coffeeModel.js";
 import fs from "fs";
 
 // add coffee
 
-const addCoffee = async (req, res) => {};
+const addCoffee = async (req, res) => {
+    
+};
 
 export { addCoffee };
