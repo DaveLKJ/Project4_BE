@@ -36,7 +36,7 @@ const listCoffee = async (req, res) => {
 const removeCoffee = async (req, res) => {
   try {
     const coffee = await coffeeModel.findById(req.body.id);
-    fs.unlink(`uploads/${food.image}`, () => {});
+    fs.unlink(`uploads/${coffee.image}`, () => {});
     await coffeeModel.findByIdAndDelete(req.body.id);
     res.json({ success: true, message: "Coffee removed" });
   } catch (error) {
