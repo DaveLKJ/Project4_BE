@@ -12,7 +12,11 @@ import orderRouter from "./routes/orderRoute.js";
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:6001", "https://project4-fe.vercel.app"],
+  origin: [
+    "http://localhost:6001",
+    "https://project4-fe.vercel.app",
+    "https://project4-fe-admin.vercel.app",
+  ],
   credentials: true,
 };
 app.use(cors(corsOptions));
