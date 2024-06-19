@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const currency = "sgd";
 const deliveryCharge = 2;
-const frontend_URL = "http://localhost:5173";
+const frontend_URL = "https://project4-fe-b37z.onrender.com";
 
 // Placing User Order for Frontend using stripe
 const placeOrder = async (req, res) => {
